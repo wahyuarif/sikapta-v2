@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/pengajuan', function () {
+    return view('pengajuan');
+});

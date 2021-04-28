@@ -31,13 +31,15 @@
   <a class="btn btn-outline-primary" href="#">Sign up</a>
 </div>
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Sikapta.</h1>
-  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
-</div>
-
 <div class="container">
-  <div class="card-deck mb-3 text-center">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Pengajuan</li>
+  </ol>
+</nav>
+<!-- <div class="card-deck mb-3 text-center"> -->
+<div class="card-deck mb-3">
 
     <div class="card mb-4 box-shadow">
       <!-- <div class="card-header">
@@ -47,30 +49,76 @@
         <!-- <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1> -->
 
         <form>
-        <div class="form-group row">
-            <label for="upload_krs" class="col-sm-4 col-form-label float-right">Upload Krs</label>
-            <div class="col-sm-8">
-            <input type="file" class="form-control" id="upload_krs" placeholder="Upload krs">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="slip_pembayaran" class="col-sm-4 col-form-label float-right">Slip pembayaran</label>
-            <div class="col-sm-8">
-            <input type="file" class="form-control" id="slip_pembayaran" placeholder="Upload slip pembayaran">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-sm-4">
-            </div>
-            <div class="col-sm-8">
-                <button type="submit" class="btn btn-primary mb-2 float-left">Upload</button>
-            </div>
-        </div>
+          <div class="form-group row">
+              <label for="judul" class="col-sm-4 col-form-label float-right">Judul</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="judul" placeholder="Judul">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="bidang_pekerjaan" class="col-sm-4 col-form-label float-right">Bidang pekerjaan</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="bidang_pekerjaan" placeholder="Bidang pekerjaan">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="deskripsi" class="col-sm-4 col-form-label float-right">Deskripsi</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="jml_pegawai" class="col-sm-4 col-form-label float-right">Jumlah pegawai</label>
+              <div class="col-sm-8">
+              <input type="number" class="form-control" id="jml_pegawai" min="1" placeholder="Jumlah pegawai">
+              <!-- <input type="number" id="replyNumber" min="0" data-bind="value:replyNumber" /> -->
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="kompleksitas" class="col-sm-4 col-form-label float-right">Kompleksitas pekerjaan</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="kompleksitas" placeholder="Kompleksitas pekerjaan">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="lokasi" class="col-sm-4 col-form-label float-right">Lokasi</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="lokasi" placeholder="Lokasi">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="nm_instansi" class="col-sm-4 col-form-label float-right">Nama instansi</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="nm_instansi" placeholder="Nama instansi">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="tel_instansi" class="col-sm-4 col-form-label float-right">No telp. instansi</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="tel_instansi" placeholder="No telpon">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="kerangka_pikir" class="col-sm-4 col-form-label float-right">Kerangka pikir</label>
+              <div class="col-sm-8">
+              <input type="file" class="form-control" id="kerangka_pikir" placeholder="Kernagka pikir">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-4">
+              </div>
+              <div class="col-sm-8">
+                  <button type="submit" class="btn btn-primary mb-2 float-left">Upload</button>
+              </div>
+          </div>
         </form>
       </div>
     </div>
 
   </div>
+</div>
+
+</div>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
