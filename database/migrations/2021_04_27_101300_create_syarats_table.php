@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateSyaratsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('syarat', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nomer_identitas');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('role');
-            $table->boolean('email_verifikasi')->default(false);
-            $table->rememberToken();
+            $table->string('krs');
+            $table->string('slip_pembayaran');
+            $table->string('surat_ijin_survey');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user');
+        Schema::drop('syarat');
     }
 }

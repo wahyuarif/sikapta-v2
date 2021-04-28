@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
-});
+})->middleware(['otentikasi'])->name('welcome');
+
+// Auth Route
+// ------------------------
+Route::get('/', 'AuthController@index')->name('auth.index');
+Route::post('/login', 'AuthController@login')->name('auth.login');
+Route::get('/registrasi', 'AuthController@registrasi')->name('auth.registrasi');
+Route::get('/logout', 'AuthController@logout')->name('auth.logout');
+Route::post('/auth/store', 'AuthController@store')->name('auth.store');
+// ------------------------
+
+Route::resource('syarat', 'SyaratController', ['only' => [
+    'create','store'
+]]);
+

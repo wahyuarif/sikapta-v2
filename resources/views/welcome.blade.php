@@ -38,6 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
+                     {{ dd(session('role')->email) }}
+
                 <div class="title">Laravel 5</div>
             </div>
         </div>

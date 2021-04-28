@@ -1,0 +1,14 @@
+@startuml
+entity Mahasiswa {
+  * identifying_attribute
+  --
+  * mandatory_attribute
+  optional_attribute
+}
+
+entity Dosen {
+
+}
+
+Dosen }|..|| Mahasiswa
+@enduml
