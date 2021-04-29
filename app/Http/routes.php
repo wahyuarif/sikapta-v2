@@ -12,10 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('ui.welcome');
 });
 
 
 Route::get('/pengajuan', function () {
-    return view('pengajuan');
+    return view('ui.pengajuan');
+});
+Route::get('/pengajuan_ok', function () {
+    return view('ui.popup_pengajuan');
+});
+
+Route::get('/pengajuan_detail', function () {
+    return view('ui.popup_pengajuan_detailed');
 });
