@@ -26,3 +26,14 @@ Route::get('/pengajuan_ok', function () {
 Route::get('/pengajuan_detail', function () {
     return view('ui.popup_pengajuan_detailed');
 });
+
+Route::get('/pengajuan_table', function () {
+    return view('ui.pengajuan_table');
+});
+
+Route::get('/tes', function () {
+    return view('ui.tes');
+});
+Route::get('/login', function () {
+    return view('ui.login');
+});

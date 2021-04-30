@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link rel="icon" href="{{ asset('icon/favicon-sikapta.png')}}">
 
     <title>SIKAPTA UNSIQ</title>
 
@@ -21,7 +21,7 @@
   <body>
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto font-weight-normal">SIKAPTA</h5>
+<h5 class="my-0 mr-md-auto font-weight-normal"><a class="navbar-brand"><img style="	width: 104px;" src="{{ asset('icon/logo-sikapta.svg')}}" alt="Logo Sikapta"></a></h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="#">Features</a>
     <!-- <a class="p-2 text-dark" href="#">Enterprise</a>
@@ -108,7 +108,7 @@
               <div class="col-sm-4">
               </div>
               <div class="col-sm-8">
-                  <button type="submit" class="btn btn-primary mb-2 float-left">Upload</button>
+                  <button type="submit" class="btn btn-primary mb-2 float-left">Send</button>
               </div>
           </div>
         </form>
@@ -166,7 +166,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="../../assets/js/vendor/popper.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js')}}"></script>
 <script src="../../assets/js/vendor/holder.min.js"></script>
 <script>
   Holder.addTheme('thumb', {
