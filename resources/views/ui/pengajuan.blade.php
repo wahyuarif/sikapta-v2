@@ -38,16 +38,11 @@
     <li class="breadcrumb-item active" aria-current="page">Pengajuan</li>
   </ol>
 </nav>
-<!-- <div class="card-deck mb-3 text-center"> -->
 <div class="card-deck mb-3">
 
     <div class="card mb-4 box-shadow">
-      <!-- <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Pro</h4>
-      </div> -->
       <div class="card-body col-sm-8 mx-auto">
-        <!-- <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1> -->
-
+        <h2 class="card-title pricing-card-title mb-4 text-muted"><small  style="font-weight:bold;">Pengajuan KP</small></h2>
         <form>
           <div class="form-group row">
               <label for="judul" class="col-sm-4 col-form-label float-right">Judul</label>

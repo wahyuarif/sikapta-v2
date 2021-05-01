@@ -16,10 +16,6 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/sikapta.css')}}" rel="stylesheet" type="text/css">
 
-    <!--Google Icon  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-
   </head>
 
   <body>
@@ -35,64 +31,64 @@
   <a class="btn btn-outline-primary" href="#">Sign up</a>
 </div>
 
-<div class="container"> <!-- container start -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Pengajuan</li>
-    </ol>
-  </nav>
+<div class="container">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Pengajuan</li>
+  </ol>
+</nav>
+<div class="card-deck mb-3">
 
-  <div class="card-deck mb-3">
     <div class="card mb-4 box-shadow">
-      <div class="card-body col-sm-6 mx-auto">
-        <div class="row"> <!-- row start -->
-          <div class="col-md-10 order-md-2 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-muted">Pengajuan Terkirim</span>
-              <span class="material-icons">check_circle</span>
-            </h4>
-
-            
-            <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0 text-success"><strong>No Pengajuan</strong></h6>
-                    <!-- <small class="text-muted">*Pengajuan Kp/Ta</small> -->
-                  </div>
-                  <span class="text-success"><strong>PJKP294210001</strong></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Jenis Pengajuan</h6>
-                    <!-- <small class="text-muted">Brief description</small> -->
-                  </div>
-                  <span class="text-muted">Kerja Praktek</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Judul Pengajuan</h6>
-                    <small class="text-muted">SIKAPTA-sistem pengambilan kerja praktek dan tugas akhir BERBASIS WEB</small>
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Tanggal Pengajuan</h6>
-                    <!-- <small class="text-muted">Brief description</small> -->
-                  </div>
-                  <span class="text-muted">29/04/21</span>
-                </li>
-              </ul>
-              <div class="d-flex flex-row-reverse">
-                <div class="p-2">
-                  <button type="button" class="btn btn-primary">Lihat detail</button>
-                </div>
+      <div class="card-body col-sm-8 mx-auto">
+        <h2 class="card-title pricing-card-title mb-4 text-muted"><small  style="font-weight:bold;">Upload syarat pengajuan TA</small></h2>
+        <form>
+          <div class="form-group row">
+              <label for="transkrip_nilai" class="col-sm-4 col-form-label float-right">Transkrip nilai</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="transkrip_nilai" placeholder="Transkrip nilai">
               </div>
           </div>
-        </div> <!-- end row -->
+          <div class="form-group row">
+              <label for="slip_pembayaran" class="col-sm-4 col-form-label float-right">Slip pembayaran Ta</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="slip_pembayaran" placeholder="Bidang pekerjaan">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="tanggal_bayar" class="col-sm-4 col-form-label float-right">Tanggal bayar</label>
+              <div class="col-sm-8">
+              <input type="date" class="form-control" id="tanggal_bayar" placeholder="Tanggal pembayaran">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="proposal" class="col-sm-4 col-form-label float-right">Upload proposal</label>
+              <div class="col-sm-8">
+              <input type="file" class="form-control" id="proposal" placeholder="Upload proposal">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="judul_ta" class="col-sm-4 col-form-label float-right">Judul tugas akhir</label>
+              <div class="col-sm-8">
+              <input type="text" class="form-control" id="judul_ta" placeholder="Judul tugas akhir">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-4">
+              </div>
+              <div class="col-sm-8">
+                  <button type="submit" class="btn btn-primary mb-2 float-left">Send</button>
+              </div>
+          </div>
+        </form>
       </div>
     </div>
-  </div> 
+
+  </div>
+</div>
+
+</div>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
@@ -131,7 +127,7 @@
       </div>
     </div>
   </footer>
-</div> <!-- container end -->
+</div>
 
 
 <!-- Bootstrap core JavaScript

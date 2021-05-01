@@ -37,3 +37,10 @@ Route::get('/tes', function () {
 Route::get('/login', function () {
     return view('ui.login');
 });
+Route::get('/pengajuan_syarat', function () {
+    return view('ui.pengajuan_ta_syarat');
+});
+
+Route::get('/timeline', function () {
+    return view('ui.timeline');
+});
