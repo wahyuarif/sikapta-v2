@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMahasiswasTable extends Migration
+class CreateMahasiswaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,10 @@ class CreateMahasiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('mahasiswa', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nim');
+        //
+        Schema::create('mahasiswa', function(Blueprint $table){
+            $table->string('nim', 15);
+            $table->primary('nim');
             $table->string('nama')->nullable();
             $table->string('kode_prodi');
             $table->foreign('kode_prodi')->references('kode_prodi')->on('prodi');
@@ -30,6 +31,7 @@ class CreateMahasiswasTable extends Migration
      */
     public function down()
     {
+        //
         Schema::drop('mahasiswa');
     }
 }

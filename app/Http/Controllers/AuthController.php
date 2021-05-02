@@ -41,7 +41,7 @@ class AuthController extends Controller
                     $request->session()->put('user', $user);
 
                     if ($user->role == 'mahasiswa') {
-                        return redirect('welcome');
+                        return redirect()->route('syarat.index');
                     }else{
                         return redirect('dosen.welcome');
 
