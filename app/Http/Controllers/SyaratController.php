@@ -21,6 +21,7 @@ class SyaratController extends Controller
     {
         $nim = session('user')->nomer_identitas;
 
+
         $this->validate($request, [
             'transkrip' => 'required|mimes:pdf',
             'slip_pembayaran' => 'required|mimes:jpg,jpeg,png|max:2000',
@@ -28,28 +29,30 @@ class SyaratController extends Controller
 
         ]);
 
-        $nameTranskrip = 'TRS-'.$nim.time().str_random(5);
-        $pathtTanskrip = '/data_file/transkrip/'.$nameTranskrip;
+        $transkrip = $request->file('transkrip');
+        $slip = $request->file('slip_pembayaran');
+        $surat = $request->file('surat_ijin_survey');
 
-        $nameSlip = 'SLIP-'.$nim.time().str_random(5);
-        $pathSlip = 'data_file/slip_pembayaran/' . $nameSlip;
-
-        $nameSurat = 'SIS-' . $nim . time() . str_random(5);
-        $pathSurat = 'data_file/surat_ijin_survey/' . $nameSurat;
-
+        $nameTranskrip = 'TRS-'.$nim.time().str_random(5) . '.'. $transkrip->getClientOriginalExtension();
+       
+        $nameSlip = 'SLIP-'.$nim.time().str_random(5) . '.'. $slip->getClientOriginalExtension();
+    
+        $nameSurat = 'SIS-' . $nim . time() . str_random(5) . '.' . $surat->getClientOriginalExtension();
+    
         // Memasukan ke dalam syarat
         Syarat::create([
-            'transkrip_nilai' => $pathtTanskrip,
-            'slip_bayar' => $pathSlip,
-            'surat_ijin_survey' => $pathSurat 
-        ])->syarat('nim');
+            'nim' => $nim,
+            'transkrip_nilai' => $nameTranskrip,
+            'slip_bayar' => $nameSlip,
+            'surat_ijin_survey' => $nameSurat 
+        ]);
 
 
-        $request->file('transkrip')->move($pathtTanskrip, $nameTranskrip);
-        $request->file('slip_pembayaran')->move($pathSlip, $nameSlip);
-        $request->file('surat_ijin_survey')->move($pathSurat, $nameSurat);
+        $transkrip->move( \storage_path('transkrip') ,$nameTranskrip);
+        $slip->move(\storage_path('slip'),$nameSlip);
+        $surat->move(\storage_path('surat'), $nameSurat);
         
-        return redirect()->back();
+        return redirect()->route('kp.index')->with('msg');
 
     }
 

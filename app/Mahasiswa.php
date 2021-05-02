@@ -10,7 +10,7 @@ class Mahasiswa extends Model
     protected $table = 'mahasiswa';
 
     protected $fillable = [
-        'nim','nama','kode_prodi', 'jenis_kelamin'
+        'nim','nama', 'alamat', 'tgl_lahir','kode_prodi', 'jenis_kelamin'
     ];
 
     public function syarat(){

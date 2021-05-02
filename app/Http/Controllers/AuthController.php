@@ -9,7 +9,7 @@ use App\Http\Requests;
 use App\User;
 use App\Prodi;
 use App\Mahasiswa;
-
+use DB;
 
 
 use Hash;
@@ -78,22 +78,33 @@ class AuthController extends Controller
             'password1' => 'required|min:5|required_with:password2|same:password2',
         ]);
 
-        // input user
-        $user = new User;
-        $user->nomer_identitas = $request->nim;
-        $user->email = $request->email;
-        $user->role = 'mahasiswa';
-        $user->password = bcrypt($request->password1);
-        $user->save();
+        DB::beginTransaction();
 
-        // input mahasiswa
-        $mahasiswa = new Mahasiswa;
-        $mahasiswa->nim = $request->nim;
-        $mahasiswa->nama = null;
-        $mahasiswa->kode_prodi = $request->prodi;
-        $mahasiswa->jenis_kelamin = null;
-        $mahasiswa->save();
-
+        try {
+            // input user
+            $user = new User;
+            $user->nomer_identitas = $request->nim;
+            $user->email = $request->email;
+            $user->role = 'mahasiswa';
+            $user->password = bcrypt($request->password1);
+            $user->save();
+            
+            // input mahasiswa
+            $mahasiswa = new Mahasiswa;
+            $mahasiswa->nim = $request->nim;
+            $mahasiswa->nama = null;
+            $mahasiswa->kode_prodi = $request->prodi;
+            $mahasiswa->jenis_kelamin = null;
+            $mahasiswa->save();
+            DB::commit();
+            // all good
+        } catch (\Exception $e) {
+            DB::rollback();
+            // something went wrong
+        }
+      
+  
+        
         return redirect('/')->with('msg', 'Berhasil Mendaftarkan Akun , silahlan Konfirmasi Email anda');
     }
 

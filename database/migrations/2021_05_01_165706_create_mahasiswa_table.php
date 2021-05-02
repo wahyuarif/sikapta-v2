@@ -17,6 +17,8 @@ class CreateMahasiswaTable extends Migration
             $table->string('nim', 15);
             $table->primary('nim');
             $table->string('nama')->nullable();
+            $table->string('alamat');
+            $table->date('tgl_lahir');
             $table->string('kode_prodi');
             $table->foreign('kode_prodi')->references('kode_prodi')->on('prodi');
             $table->string('jenis_kelamin')->nullable();
