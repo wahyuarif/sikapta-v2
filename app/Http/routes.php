@@ -44,3 +44,7 @@ Route::get('/pengajuan_syarat', function () {
 Route::get('/timeline', function () {
     return view('ui.timeline');
 });
+
+Route::get('/progresbar', function () {
+    return view('ui.progresbar');
+});
