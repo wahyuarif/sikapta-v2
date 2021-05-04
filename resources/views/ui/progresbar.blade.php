@@ -52,7 +52,7 @@
             <!-- Tittle -->
             <div class="tittle">
                 <h2>Pengajuan Tugas Akhir</h2>
-                <p>In order to use this service, you have to complete this verification process</p>
+                <p>Untuk melanjutkan pengajuan, kamu harus menyelesaikan syarat yang dibutuhkan.</p>
             </div>
             <!-- progressbar -->
             <ul id="progressbar">
