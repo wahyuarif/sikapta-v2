@@ -54,7 +54,7 @@
   </div>
 
   <div class="form-group">
-    <label for="prodi">Prosi</label>
+    <label for="prodi">Prodi</label>
     <select 
       class="custom-select"
       name="prodi"
